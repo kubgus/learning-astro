@@ -19,7 +19,7 @@ const posts = await Astro.glob("./blog/*.md")
 		<main>
 			<h2>Contents:</h2>
 			<section>
-				{ posts.map((post) => 
+				{ posts.reverse().map((post) => 
 					<article>
 						<h3><a href={ post.url }>{ post.frontmatter.title }</a></h1>
 						<p>{ post.frontmatter.description }</p>

@@ -19,6 +19,7 @@ const { frontmatter } = Astro.props;
 
     img.title-image {
       margin-top: 1rem;
+      border-radius: 0.5rem;
     }
 
     h3 {
@@ -45,7 +46,7 @@ const { frontmatter } = Astro.props;
         <h3>{ frontmatter.description }</h3>
         <p> Published by { frontmatter.author } on { frontmatter.pubDate.slice(0, 10) }</p>
       </div>
-      <img class="title-image" src={ frontmatter.image.url } alt={ frontmatter.image.alt } width="300" />
+      <img class="title-image" src={ frontmatter.image.url } alt={ frontmatter.image.alt } height="100" />
     </header>
     <main>
       <slot />
